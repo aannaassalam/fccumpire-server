@@ -18,5 +18,8 @@
     "nodemailer": "^6.9.2",
     "nodemon": "^2.0.22",
     "puppeteer": "^20.2.1"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
