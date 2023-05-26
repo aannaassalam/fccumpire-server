@@ -60,9 +60,9 @@ const template = (name) => {
         }
         .date {
           position: absolute;
-          font-size: 20px;
+          font-size: 18px;
           bottom: 18.5%;
-          left: 29%;
+          left: 28%;
           color: #555;
         }
       </style>
