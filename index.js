@@ -153,4 +153,4 @@ app.post("/certificate", async (req, res) => {
   //   res.status(200).send("fault");
 });
 
-app.listen(5000, () => console.log("server running!"));
+app.listen(process.env.PORT || 5000, () => console.log("server running!"));
