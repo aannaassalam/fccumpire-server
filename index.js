@@ -47,7 +47,7 @@ const template = (name) => {
           top: 46%;
           left: 50%;
           transform: translate(-50%, -50%);
-          font-size: 100px;
+          font-size: 85px;
           color: #01395e;
         }
         .underline {
@@ -60,7 +60,7 @@ const template = (name) => {
         }
         .date {
           position: absolute;
-          font-size: 22px;
+          font-size: 20px;
           bottom: 18.5%;
           left: 29%;
           color: #555;
