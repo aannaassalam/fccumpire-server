@@ -47,7 +47,7 @@ const template = (name) => {
           top: 46%;
           left: 50%;
           transform: translate(-50%, -50%);
-          font-size: 85px;
+          font-size: 70px;
           color: #01395e;
         }
         .underline {
