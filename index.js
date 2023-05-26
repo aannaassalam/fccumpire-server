@@ -112,6 +112,10 @@ const generatePDF = async (name) => {
   return pdf;
 };
 
+app.get("/",(req, res) =>{
+  res.send("Welcome to FCCUmpire Server!")
+})
+
 app.post("/certificate", async (req, res) => {
   const { name, email } = req.body;
 
