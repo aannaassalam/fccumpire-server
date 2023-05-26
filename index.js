@@ -112,9 +112,9 @@ const generatePDF = async (name) => {
   return pdf;
 };
 
-app.get("/",(req, res) =>{
-  res.send("Welcome to FCCUmpire Server!")
-})
+app.get("/", (req, res) => {
+  res.send("Welcome to FCCUmpire Server!");
+});
 
 app.post("/certificate", async (req, res) => {
   const { name, email } = req.body;
@@ -153,6 +153,6 @@ app.post("/certificate", async (req, res) => {
   //   res.status(200).send("fault");
 });
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log("server running!"));
