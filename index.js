@@ -44,7 +44,7 @@ const template = (name) => {
         }
         .name {
           position: absolute;
-          top: 46%;
+          top: 48%;
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: 60px;
