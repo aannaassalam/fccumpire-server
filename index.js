@@ -71,7 +71,7 @@ const template = (name) => {
     <body>
       <div class="parent-div">
         <img
-          src="https://i.postimg.cc/VL0mwkzQ/certificate.jpg"
+          src="https://fccumpire-server.herokuapp.com/certificate.jpg"
           alt="certificate"
         />
         <h2 class="name">
