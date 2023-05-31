@@ -63,7 +63,7 @@ const template = (name) => {
           position: absolute;
           font-size: 18px;
           bottom: 18.5%;
-          left: 28%;
+          left: 30%;
           color: #555;
         }
       </style>
@@ -71,7 +71,7 @@ const template = (name) => {
     <body>
       <div class="parent-div">
         <img
-          src="https://fccumpire-server.herokuapp.com/certificate.jpg"
+          src="https://fccumpire-server.herokuapp.com/certificate.png"
           alt="certificate"
         />
         <h2 class="name">
@@ -123,7 +123,7 @@ app.post("/certificate", async (req, res) => {
   const pdf = await generatePDF(name);
 
   const mailOptions = {
-    from: { name: "Anas Alam", address: "anasalam027@gmail.com" },
+    from: { name: "FCCUmpire", address: "anasalam027@gmail.com" },
     to: email,
     subject: "FCCUmpire - Certificate of Appreciation",
     text: `Please find your certificate below!`,
