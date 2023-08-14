@@ -13,6 +13,14 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+const transporter_batting_club = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "admin@thebattingclub.com",
+    pass: "lsutbawawiyvruex",
+  },
+});
+
 app.use(express.static("./assets"));
 app.use(express.json());
 
@@ -123,7 +131,7 @@ app.post("/certificate", async (req, res) => {
   const pdf = await generatePDF(name);
 
   const mailOptions = {
-    from: { name: "FCCUmpire", address: "anasalam027@gmail.com" },
+    from: { name: "FCCUmpire", address: "fccumpire@gmail.com" },
     to: email,
     subject: "FCCUmpire - Certificate of Appreciation",
     text: `Please find your certificate below!`,
@@ -154,6 +162,30 @@ app.post("/certificate", async (req, res) => {
   //   res.status(200).send("fault");
 });
 
-const PORT = process.env.PORT || 5000;
+app.post("/send_mail", async (req, res) => {
+  const { name, email, admin_email, subject, text } = req.body;
+
+  const mailOptions = {
+    from: { name: "The Batting Club", address: "admin@thecontactclub.com" },
+    to: email,
+    cc: `${admin_email}, contact@thebattingclub.com`,
+    subject: subject,
+    text: text,
+    // html: template(name),
+  };
+
+  transporter_batting_club.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+      res.status(500).json(error);
+    } else {
+      console.log("Email sent: " + info.response);
+      res.send("Mail sent!");
+    }
+  });
+  res.status(200).send("Mail sent");
+});
+
+const PORT = process.env.PORT || 5100;
 
 app.listen(PORT, () => console.log("server running!"));
